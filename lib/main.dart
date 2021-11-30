@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:passapp_clone/components/bottom_navigation_bar.dart';
+import 'package:passapp_clone/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const List<Widget> _screen = <Widget>[
+    HomeScreen(),
+  ];
   int _selectedIndex = 0;
 
   _onItemTapped(int index) {
@@ -47,9 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Container(
-        child: const Text("Example"),
-      ),
+      body: _screen[_selectedIndex],
       bottomNavigationBar: CBottomNavigationBar(
         selectedIndex: _selectedIndex,
         onItemTapped: _onItemTapped,
