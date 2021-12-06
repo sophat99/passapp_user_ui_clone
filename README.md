@@ -1,1 +1,1 @@
-This is for leanring purpose only
+This is for learning purpose only
