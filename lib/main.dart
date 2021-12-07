@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:passapp_clone/components/bottom_navigation_bar.dart';
+import 'package:passapp_clone/screens/account.dart';
+import 'package:passapp_clone/screens/contact_us.dart';
 import 'package:passapp_clone/screens/home.dart';
+import 'package:passapp_clone/screens/my_booking.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +37,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static const List<Widget> _screen = <Widget>[
     HomeScreen(),
+    MyBookingScreen(),
+    ContactUsScreen(),
   ];
   int _selectedIndex = 0;
 
