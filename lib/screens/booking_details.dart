@@ -15,7 +15,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
     final Completer<GoogleMapController> _controller = Completer();
     late GoogleMapController controller;
 
-    CameraPosition _kGooglePlex = const CameraPosition(
+    final CameraPosition _kGooglePlex = const CameraPosition(
         target: LatLng(37.42796133580664, -122.085749655962),
         zoom: 14.4746,
     );
@@ -23,7 +23,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Booking Details"),
+        title: const Text("Booking Details"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -31,17 +31,17 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
           child: Column(
             children: [
               Row(
-                children: [Text("Trip Details")],
+                children: const [Text("Trip Details")],
               ),
               Row(
-                children: [
+                children: const [
                   Text("Date : "),
                   Spacer(),
                   Text("11/11/2021"),
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Icon(Icons.room),
                   Text("\"From unknown street\""),
                   Spacer(),
@@ -49,15 +49,15 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Icon(Icons.room),
                   Text("..."),
                 ],
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
-              Container(
+              SizedBox(
                   width: MediaQuery.of(context).size.width,
                 height: 250,
                 child: GoogleMap(
@@ -73,26 +73,11 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                     },
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
-              // IntrinsicHeight(
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //     children: const [
-              //       Text("Ttest"),
-              //       VerticalDivider(
-              //         thickness: 1,
-              //           indent: 0,
-              //           endIndent: 0,
-              //       ),
-              //       //Divider(thickness: 1),
-              //       Text("Test2"),
-              //     ],
-              //   ),
-              // ),
               Table(
-                border: TableBorder(
+                border: const TableBorder(
                     verticalInside: BorderSide(
                         width: 1,
                         color: Colors.grey,
@@ -104,7 +89,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                     children: [
                       Center(
                         child: Column(
-                          children: [
+                          children: const [
                             Text("0 m"),
                             Text("Duration"),
                           ],
@@ -112,7 +97,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                       ),
                       Center(
                         child: Column(
-                          children: [
+                          children: const [
                             Text("0 km"),
                             Text("Distance"),
                           ],
@@ -122,34 +107,34 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   )
                 ],
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
               Row(
-                children: [
+                children: const [
                   Text("Total:"),
                   Spacer(),
                   Text("0 KHR"),
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Icon(Icons.stop),
                   Text("Decided not to go"),
                 ],
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
               Row(
-                children: [
+                children: const [
                   Text("Payment method"),
                   Spacer(),
                   Icon(Icons.money),
                   Text("Cash"),
                 ],
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
               Center(
@@ -165,7 +150,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text("K0476"),
                         Text("Susuki Viva - ក្រហម - Red - ក្រចេះ.1A.0277"),
                         Text("Rormork"),
@@ -174,13 +159,13 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   ],
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
               Row(
                 children: [
                   Column(
-                    children: [
+                    children: const [
                       Text("Company"),
                     ],
                   ),
@@ -191,19 +176,19 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
               Row(
                 children: [
                   Column(
-                    children: [
+                    children: const [
                       Text("Report any issue"),
                       Text("+85589833597"),
                     ],
                   ),
                 ],
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Icon(Icons.message),
                   Icon(Icons.share),
                 ],
